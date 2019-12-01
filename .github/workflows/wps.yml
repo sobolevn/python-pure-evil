@@ -12,7 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: wemake-services/wemake-python-styleguide@latest
+    - name: wemake-python-styleguide
+      uses: wemake-services/wemake-python-styleguide@0.13.1
       with:
         reporter: 'github-pr-review'
       env:

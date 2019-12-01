@@ -16,5 +16,6 @@ jobs:
       uses: wemake-services/wemake-python-styleguide@0.13.1
       with:
         reporter: 'github-pr-review'
+        path: 'examples.py'
       env:
         GITHUB_TOKEN: ${{ secrets.github_token }}

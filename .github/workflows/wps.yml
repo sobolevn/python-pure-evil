@@ -1,0 +1,19 @@
+name: wps
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: wemake-services/wemake-python-styleguide@latest
+      with:
+        reporter: 'github-pr-review'
+      env:
+        GITHUB_TOKEN: ${{ secrets.github_token }}

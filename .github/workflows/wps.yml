@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: wemake-python-styleguide
-      uses: wemake-services/wemake-python-styleguide@0.13.1
+      uses: wemake-services/wemake-python-styleguide@master
       with:
         reporter: 'github-pr-review'
         path: 'examples.py'
